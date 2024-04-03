@@ -1,3 +1,7 @@
+window.addEventListener("keydown", (event) => {
+  let code = event.keyCode;
+  let keyElement = document.querySelector(`div[data-key="${code}"]`);
+
 let crashRide = document.querySelector('#crash-ride');
 let hiHatTop = document.querySelector('#hihat-top');
 
@@ -8,7 +12,7 @@ const animateCrashOrRide = () => {
 const animateHiHatClosed = () =>{
   hiHatTop.computedStyleMap.top = '171px';
 }
-
+/*
 window.addEventListener("keydown", (event) => {
   let code = event.keyCode;
   let keyElement = document.querySelector(`div[data-key="${code}"]`);
@@ -29,7 +33,7 @@ switch(Code){
     break;
 }
 });
-
+*/
 const removeCrashRideTransition = e => {
   if(e.propertyName !== 'transform') return;
 
